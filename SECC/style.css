@@ -43,3 +43,6 @@ body{
     background-size: cover;
     height: 100vh;
 }
+li:nth-child(1){
+    float: left !important;
+}
