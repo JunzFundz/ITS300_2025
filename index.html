@@ -1,32 +1,55 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
-    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        .grid-container {
+            display: grid;
+            grid-template-columns: auto auto auto auto;
+            grid-gap: 10px;
+            padding: 10px;
+        }
+
+        .grid-container>div {
+            background-color: rgba(255, 255, 255, 0.8);
+            text-align: center;
+            padding: 20px 0;
+            font-size: 30px;
+            outline: 1px solid black;
+        }
+
+        .item1 {
+            grid-column: 1 / 5;
+        }
+
+        .item2 {
+            grid-column: 1 / 2;
+            height: 80vh;
+        }
+
+        .item3 {
+            grid-column: 2 / 5;
+        }
+        
+        .item4 {
+            grid-column: 1 / 5;
+        }
+    </style>
 </head>
 
 <body>
-    <div class="container">
-        <div class="nav-section">
-            Item 1
-        </div>
-        <div class="content-section">
-            <ul>
-                <li><a href="">Home</a></li>
-                <li><a href="">About</a></li>
-                <li><a href="">Contact</a></li>
-            </ul>
-        </div>
-        <div class="items-section">
-            Item 3
-        </div>
-        <div class="footer-section">
-            Item 4
-        </div>
+
+    <div class="grid-container">
+        <div class="item1">Navbar</div>
+        <div class="item2">2</div>
+        <div class="item3">3</div>
+        <div class="item4">4</div>
     </div>
+
 </body>
 
 </html>

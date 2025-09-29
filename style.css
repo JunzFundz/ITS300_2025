@@ -10,20 +10,7 @@
 
 .container > div{
     outline: 1px solid rebeccapurple;
-    /* padding: 10px; */
-    /* text-align: center; */
+    padding: 10px;
+    text-align: center;
 }
 
-.content-section ul li{
-    list-style: none;
-
-    a{
-        color: blue;
-        text-decoration: none;
-    }
-}
-
-ul{
-    display: flex;
-    justify-content: space-around;
-}
