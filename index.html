@@ -2,52 +2,34 @@
 <html>
 
 <head>
-    <style>
-        *{
-            margin: 0;
-            padding: 0;
-        }
-        .grid-container {
-            display: grid;
-            grid-template-columns: auto auto auto auto;
-            grid-gap: 10px;
-            padding: 10px;
-        }
-
-        .grid-container>div {
-            background-color: rgba(255, 255, 255, 0.8);
-            text-align: center;
-            padding: 20px 0;
-            font-size: 30px;
-            outline: 1px solid black;
-        }
-
-        .item1 {
-            grid-column: 1 / 5;
-        }
-
-        .item2 {
-            grid-column: 1 / 2;
-            height: 80vh;
-        }
-
-        .item3 {
-            grid-column: 2 / 5;
-        }
-        
-        .item4 {
-            grid-column: 1 / 5;
-        }
-    </style>
+    <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
 
     <div class="grid-container">
-        <div class="item1">Navbar</div>
-        <div class="item2">2</div>
-        <div class="item3">3</div>
-        <div class="item4">4</div>
+        <div class="navbar">
+            <ul>
+                <li><a href="">My portfolio</a></li>
+                <li><a href="">Home</a></li>
+                <li><a href="">About</a></li>
+                <li><a href="">Contact</a></li>
+            </ul>
+        </div>
+
+        <div class="image-section">
+            <img src="picture.jpg" alt="">
+        </div>
+
+        <div class="text-section">
+            <ul>
+                <li>Diongie C. Fundador</li>
+                <li>BSInT 3rd year</li>
+            </ul>
+        </div>
+
+        <div class="footer">
+        </div>
     </div>
 
 </body>

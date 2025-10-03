@@ -1,16 +1,83 @@
-*{
-    margin: 0;
-    padding: 0;
-}
-.container{
-    display: grid;
-    grid-template-columns: auto 1fr;
-    gap: 15px;
-}
+        * {
+            margin: 0;
+            padding: 0;
+        }
 
-.container > div{
-    outline: 1px solid rebeccapurple;
-    padding: 10px;
-    text-align: center;
-}
+        .grid-container>div {
+            font-size: 30px;
+            /* outline: 3px solid rgb(10, 28, 226); */
+        }
 
+        .grid-container {
+            display: grid;
+            grid-template-columns: auto auto auto auto;
+            /* grid-gap: 15px; */
+            padding: 10px;
+        }
+
+        .navbar {
+            grid-column: 1/5;
+            padding: 20px;
+            background-color: aquamarine;
+
+            ul {
+                float: right;
+                list-style: none;
+                display: flex;
+                flex-direction: row;
+            }
+
+            li:nth-child(1){
+                position: absolute;
+                left: 0;
+            }
+
+            li {
+                padding-inline: 20px;
+            }
+
+            a {
+                font-size: 2.5rem;
+                font-family: Verdana, Geneva, Tahoma, sans-serif;
+                font-weight: 700;
+                text-decoration: none;
+            }
+        }
+
+        .image-section {
+            grid-column: 1/2;
+            text-align: center;
+            padding: 4rem 0px 0px 0px;
+
+            img {
+                border-radius: 50%;
+                width: 85%;
+                height: 60vh;
+            }
+        }
+
+        .text-section {
+            grid-column: 2/5;
+            display: grid;
+            place-content: center;
+
+            ul {
+                display: flex;
+                list-style: none;
+                flex-direction: column;
+            }
+
+            li:nth-child(1) {
+                font-family: monospace;
+                font-size: 5rem;
+            }
+
+            li:nth-child(2) {
+                font-family: sans-serif;
+            }
+        }
+
+        .footer {
+            grid-column: 1/5;
+            height: 10vh;
+        }
