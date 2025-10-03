@@ -10,27 +10,32 @@
 
         .grid-container {
             display: grid;
-            grid-template-columns: auto auto auto auto;
-            /* grid-gap: 15px; */
-            padding: 10px;
+            grid-template-columns: repeat(10, 1fr);
+        }
+
+        .menu-bar {
+            display: none !important;
         }
 
         .navbar {
-            grid-column: 1/5;
+            grid-column: 1/11;
             padding: 20px;
-            background-color: aquamarine;
 
             ul {
+                background-color: rgb(25, 0, 254);
+                border-radius: 40px;
+                padding: 20px;
                 float: right;
                 list-style: none;
                 display: flex;
                 flex-direction: row;
+
             }
 
-            li:nth-child(1){
+            /* li:nth-child(1) {
                 position: absolute;
                 left: 0;
-            }
+            } */
 
             li {
                 padding-inline: 20px;
@@ -41,23 +46,41 @@
                 font-family: Verdana, Geneva, Tahoma, sans-serif;
                 font-weight: 700;
                 text-decoration: none;
+                color: aliceblue;
+            }
+
+            #logo:hover {
+                background-color: rgb(208, 255, 1);
+                color: black;
+                /* font-size: 3rem;
+                transform: scale(2.1); */
+
+                padding: 20px;
+            }
+
+            #logo {
+                position: absolute;
+                left: 0;
+                border-radius: 40px;
+                color: rgb(0, 0, 0);
+                transition: 0.4s ease-in-out;
             }
         }
 
         .image-section {
-            grid-column: 1/2;
+            grid-column: 1/5;
             text-align: center;
             padding: 4rem 0px 0px 0px;
 
             img {
                 border-radius: 50%;
                 width: 85%;
-                height: 60vh;
+                height: auto;
             }
         }
 
         .text-section {
-            grid-column: 2/5;
+            grid-column: 5/11;
             display: grid;
             place-content: center;
 
@@ -78,6 +101,59 @@
         }
 
         .footer {
-            grid-column: 1/5;
+            grid-column: 1/11;
             height: 10vh;
+        }
+
+        @media screen and (max-width: 600px) {
+            body {
+                background-color: rgb(255, 200, 0);
+            }
+
+            .image-section {
+                grid-column: 1/11;
+            }
+
+            .text-section {
+                grid-column: 1/11;
+            }
+        }
+
+        @media screen and (max-width: 400px) {
+            body {
+                background-color: aqua;
+            }
+
+            .navbar {
+                #logo{
+                    font-size: 20px;
+                }
+
+                ul {
+                    display: none;
+                }
+
+                .menu-bar {
+                    float: right;
+                    display: block !important;
+                }
+            }
+
+            .image-section {
+                grid-column: 1/11;
+            }
+
+            .text-section {
+                grid-column: 1/11;
+
+                li:nth-child(1) {
+                    font-family: monospace;
+                    font-size: 2rem;
+                }
+
+                li:nth-child(2) {
+                    font-family: sans-serif;
+                    font-size: 1.5rem;
+                }
+            }
         }
