@@ -13,20 +13,14 @@
             grid-template-columns: repeat(10, 1fr);
         }
 
-        .menu-bar {
-            display: none !important;
-        }
-
         .navbar {
             grid-column: 1/11;
             padding: 20px;
-            background-color: rgb(11, 83, 116);
-            color: aliceblue;
 
             ul {
-                /* background-color: rgb(25, 0, 254);
+                background-color: rgb(25, 0, 254);
                 border-radius: 40px;
-                padding: 20px; */
+                padding: 20px;
                 float: right;
                 list-style: none;
                 display: flex;
@@ -48,27 +42,30 @@
                 font-family: Verdana, Geneva, Tahoma, sans-serif;
                 font-weight: 700;
                 text-decoration: none;
-                color: rgb(255, 255, 255);
+                color: aliceblue;
             }
 
             #logo:hover {
-                /* background-color: rgb(208, 255, 1);
-                color: black; */
+                background-color: rgb(208, 255, 1);
+                color: black;
                 /* font-size: 3rem;
                 transform: scale(2.1); */
-                /* 
-                padding: 20px; */
             }
 
             #logo {
+                padding: 15px;
                 position: absolute;
                 left: 0;
                 border-radius: 40px;
+                color: rgb(0, 0, 0);
                 transition: 0.4s ease-in-out;
             }
-
-            #menu {
+            #menu{
                 display: none;
+                color: white;
+                    background-color: rgb(191, 5, 228);
+                    padding: 5px;
+                    border-radius: 10px;
             }
         }
 
@@ -78,9 +75,13 @@
             padding: 4rem 0px 0px 0px;
 
             img {
-                border-radius: 20%;
+                border-radius: 50%;
                 width: 85%;
                 height: auto;
+                transition: .3s ease-in-out;
+            }
+            img:hover{
+                transform: rotate(50deg);
             }
         }
 
@@ -110,176 +111,131 @@
             height: 10vh;
         }
 
-        @media screen and (max-width: 1000px) {
-            .navbar {
-                background-color: blue;
+        @media only screen and (max-width: 600px) {
 
-                ul li a {
-                    font-size: 2rem;
+            .navbar {
+                ul {
+                    display: none;
                 }
 
-                #logo {
-                    margin-top: -10px;
-                    font-size: 3rem;
-                    margin-left: 20px;
+                #menu {
+                    display: block;
+                    font-size: 50px;
+                    float: right;
+                }
+
+                a {
+                    font-size: 2rem;
                 }
             }
 
             .image-section {
                 grid-column: 1/11;
-                padding-top: 10px;
 
                 img {
-                    /* border-radius: 10px; */
-                    width: 60%;
+                    width: 70%;
                 }
             }
 
             .text-section {
                 grid-column: 1/11;
-                padding-top: 1rem;
+
+                ul {
+                    padding-top: 1.5rem;
+                }
 
                 li:nth-child(1) {
+                    font-family: monospace;
                     font-size: 3rem;
                 }
 
                 li:nth-child(2) {
                     font-size: 2rem;
+                    font-family: sans-serif;
                 }
             }
         }
 
-        @media screen and (max-width: 800px) {
+        @media only screen and (max-width: 500px) {
+
             .navbar {
                 ul {
                     display: none;
                 }
 
-                #logo {
+                #menu {
+                    display: block;
+                    float: right;
                     font-size: 30px;
-                    margin-left: 20px;
                 }
 
-                #menu {
-                    float: right;
+                a {
+                    font-size: 1.5rem;
                 }
             }
 
             .image-section {
                 grid-column: 1/11;
-                padding-top: 10px;
 
                 img {
-                    /* border-radius: 10px; */
-                    width: 60%;
+                    width: 100%;
                 }
-            }
-
-            .text-section {
-                grid-column: 1/11;
-                padding-top: 1rem;
-
-                li:nth-child(1) {
-                    font-size: 3rem;
-                }
-
-                li:nth-child(2) {
-                    font-size: 2rem;
-                }
-            }
-        }
-
-        @media screen and (max-width: 600px) {
-            .navbar {
-                ul {
-                    display: none;
-                }
-
-                #logo {
-                    font-size: 30px;
-                    margin-left: 20px;
-                }
-
-                #menu {
-                    float: right;
-                }
-            }
-
-            .image-section {
-                grid-column: 1/11;
             }
 
             .text-section {
                 grid-column: 1/11;
 
                 li:nth-child(1) {
-                    font-size: 3rem;
-                }
-
-                li:nth-child(2) {
-                    font-size: 2rem;
-                }
-            }
-        }
-
-        @media screen and (max-width: 500px) {
-            .navbar {
-                ul {
-                    display: none;
-                }
-
-                #logo {
-                    font-size: 30px;
-                    margin-left: 20px;
-                }
-
-                #menu {
-                    float: right;
-                }
-            }
-
-
-            .text-section {
-
-                li:nth-child(1) {
+                    font-family: monospace;
                     font-size: 2rem;
                 }
 
                 li:nth-child(2) {
                     font-size: 1.5rem;
+                    font-family: sans-serif;
                 }
             }
         }
 
-        @media screen and (max-width: 400px) {
+        @media only screen and (max-width: 400px) {
+
             .navbar {
+                background-color: aqua;
+
                 ul {
                     display: none;
                 }
 
-                #logo {
+                #menu {
+                    display: block;
+                    float: right;
                     font-size: 30px;
-                    margin-left: 20px;
                 }
 
-                #menu {
-                    float: right;
+                a {
+                    font-size: 1.5rem;
                 }
             }
 
             .image-section {
                 grid-column: 1/11;
+
+                img {
+                    width: 100%;
+                }
             }
 
             .text-section {
                 grid-column: 1/11;
 
                 li:nth-child(1) {
+                    font-family: monospace;
                     font-size: 2rem;
                 }
 
                 li:nth-child(2) {
                     font-size: 1.5rem;
+                    font-family: sans-serif;
                 }
             }
         }
