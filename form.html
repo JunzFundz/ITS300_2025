@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Simple Calculator</title>
+    </head>
+
+    <body>
+
+        <input type="text" id="viewvalue" value="" placeholder="0">
+
+        <br><br>
+
+        <input onclick="insert('1')" type="button" value="1">
+        <input onclick="insert('2')" type="button" value="2">
+        <input onclick="insert('3')" type="button" value="3">
+        <br>
+
+        <input onclick="insert('4')" type="button" value="4">
+        <input onclick="insert('5')" type="button" value="5">
+        <input onclick="insert('6')" type="button" value="6">
+        <br>
+
+        <input onclick="insert('7')" type="button" value="7">
+        <input onclick="insert('8')" type="button" value="8">
+        <input onclick="insert('9')" type="button" value="9">
+        <br>
+
+        <input onclick="insert('0')" type="button" value="0">
+        <input onclick="insert('+')" type="button" value="+">
+        <input onclick="insert('-')" type="button" value="-">
+        <br>
+
+        <input onclick="insert('*')" type="button" value="*">
+        <input onclick="insert('/')" type="button" value="/">
+        <input type="button" onclick="clearView()" value="C">
+        <br><br>
+
+        <input type="button" value="=" onclick="calculate()"> 
+    </body>
+
+    <script>
+
+        var view = document.getElementById('viewvalue');
+
+        function insert(num){
+            view.value += num;
+        }
+
+        function clearView(){
+            view.value = "";
+        }
+
+        function calculate(){
+            try{
+                view.value = eval(view.value)
+            }catch{
+                view.value = "Error"
+            }
+        }
+
+    </script>
+
+</html>
